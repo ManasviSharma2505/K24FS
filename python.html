@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Notes - Codenotes Hub</title>
+    <link rel="stylesheet" href="python.css">
+</head>
+<body>
+    <nav><a href="/index.html" ><button>HOME</button></a>
+        <a href="https://onecompiler.com/html"><button>HTML</button></a>
+        <a href="https://www.programiz.com/python-programming/online-compiler/"><button>PYTHON</button></a>
+        <a href="https://onecompiler.com/html/3wx7252uq"><button>CSS</button></a>
+        <a href="last.html"><button>Help Desk</button></a>
+    
+    </nav>
+    <header>
+        <h1>Python Notes</h1>
+        <p>Master Python programming for various applications.</p>
+    </header>
+
+    <main>
+        <section class="note-section">
+            <h2>Introduction to Python</h2>
+            <p>Python is high level,object-oriented,interactive,general-purpose programming language which is developed by Guido van Rossum in 1991.It is used in web development,Artificial Intelligece,Machine learning and Mobile Application.Python is interpreted language as its programes are executed by an interpreter.</p>
+        </section>
+
+        <section class="note-section">
+            <h2>Basic Terminilogise</h2>
+            <p>Python has a simple Terminilogise that emphasizes readability</p>
+            <ul>
+                <li><strong>print()</strong>: Prints output to the console.</li>
+                <li><strong>Variables</strong>: A Variable is like a container where you can store the values of diffrent datatypes </li>
+                <li><strong>Tokens</strong>:A token is the smallest element of a python script that is meaningful to interpreter.</li>
+                <li><strong>Data types</strong>:As the name suggests data types is the type of data we store in any variable.There are different types of datatypes used in python for example:strings,integers,tuples,lists,dictionary etc.</li>
+                <li><strong>Dynamic Typing</strong>:The term dynamic typing refers to declaring a variable multiple times with different datatypes when and where required.</li>
+                <p>For Example:
+                <p class="s1">
+                    x=20<br>
+                    print(x)<br>
+                    print(type(x))<br>
+                    x="Hello world"<br>
+                    print(x)<br>
+                    print(type(x))<br>
+                </p>
+                <p class="s1">Here in the above example we will get output as:
+                    20<br>
+                    &lt;class "int"&gt;<br>
+                    Hello world<br>
+                    &lt;class "string"&gt;<br>
+                </p>
+                <li><strong>Keywords: </strong>Kewwords are reserved words used in python which has some special meaning to the interpreter.We can check all the keyword of python using the below written code</li>
+                <p class="s1">
+                    import keyword<br>
+                    print(keyword.kwlist)<br>
+                </p>
+                <p># All the keywords used in python are in small letters except True,False and None.</p>
+                <li><strong>Mutable and Immutable types</strong>:in some situations we need to change the value but in some conditions python doesn't allow us to change the value.Therefore in <b>Mutable</b> datatype we can modify the value once created for exmaple list and tuple but in <b>immutable </b> data type we cannot change the value one created for example: string,dictionary etc.</li>
+                <li><strong>Operators and Operands</strong>:<b>Operators</b> are symbols that operates upon <b>Operands</b> to form an expression.</li>
+                <p class="s1">
+                y=10/2<br>
+                print(y)<br>
+                Here in the above code we will get 5.0 as output.Where 10 and 2 are Operators and "/" symbol is operand.
+            </p>
+            </ul>
+        </section>
+        <section class="note-section">
+            <h2>Operators in python</h2>
+            <p><b>Arithmetic Operators:</b></p>
+            <table>
+                <tr>
+                    <th>Operators</th><th>Example</th>
+                </tr>
+                <tr><td>Unary Operators</td><td>+3,-3</td></tr>
+                <tr><td>+(addition)</td><td>value of 5+2=7</td></tr>
+                <tr><td>-(Subtraction)</td><td>value of 5-2=5</td></tr>
+                <tr><td>*(Multiplication)</td><td>value of 5*2=10</td></tr>
+                <tr><td>/(Division)</td><td>value of 3/2=1.5</td></tr>
+                <tr><td>//(Modulas)</td><td>value of 3/2=1</td></tr>
+                <tr><td>*(Exponential)</td><td>value of 3*2=9</td></tr>
+                
+            </table>
+            <p><b>Assignment Operators:</b></p>
+            <table>
+                <tr>
+                    <th>Operators</th><th>Example</th>
+                </tr>
+                <tr><td>+=(Add and Assign)</td><td>x+=5(x=x+5)</td></tr>
+                <tr><td>-=(Subtract and assign)</td><td>x-=5(x=x-5)</td></tr>
+                <tr><td>=(Multiply and assign)</td><td>x=5(x=x*5)</td></tr>
+                <tr><td>/=(Divide and assign Quotient)</td><td>x/=5(x=x/5)</td></tr>
+                <tr><td>%=(Divide and assign remainder)</td><td>x%=5(x=x%5)</td></tr>
+                <tr><td>//=(Floor division and assign)</td><td>x//=5(x=x//5)</td></tr>
+                <tr><td>*=(Exponential and assign)</td><td>x=5(x=x*5)</td></tr>
+                
+            </table>
+            <p><b>Comparison Operators:</b></p>
+            <table>
+                <tr>
+                    <th>Operators</th><th>Example(x=5 and y=2)</th>
+                </tr>
+                <tr><td>Equal to(==)</td><td>(x==y) returns False</tr>
+                <tr><td>not equal to(!=)</td><td>(x!=y) returns True</td></tr>
+                <tr><td>Less than (&lt)</td><td>(x &lt;y) returns False</td></tr>
+                <tr><td>Greater than(&gt;)</td><td>returns True</td></tr>
+                <tr><td>Less than equal to(&lt;=)</td><td>returns False</td></tr>
+                <tr><td>Greater than equal to(&gt;=)</td><td>return True</td></tr>
+                
+            </table>
+            <p><b>Logical Operators:</b></p>
+            <table>
+                <tr>
+                    <th>Operators</th><th>Example(x=6,y=2)</th>
+                </tr>
+                <tr><td>not</td><td>not(x>y)returns False</td></tr>
+                <tr><td>and</td><td>(x>3 and y<2) returns False </td></tr>
+                <tr><td>or</td><td>(x>3 or y<2) returns True</td></tr>            
+            </table>
+            <br>
+            <p><b>Membership Operators:</b></p>
+            <table>
+                <tr>
+                    <th>Operators</th><th>Example</th>
+                </tr>
+                <tr><td>in</td><td>"h" in "hello" returns True</td></tr>
+                <tr><td>not in</td><td> "H" not in "hello" returns True </td></tr>            
+            </table>
+            <br>
+            <p><b>Identity Operators:</b></p>
+            <table>
+                <tr>
+                    <th>Operators</th><th>Example(x=5)</th>
+                </tr>
+                <tr><td>is</td><td>if y=x then (x is y) returns True</td></tr>
+                <tr><td>is not</td><td>if y=10 then (x is not y) returns True</td></tr>            
+            </table>
+            <br>
+
+        </section>
+        <section class="note-section">
+            <h2>Input-Output in python</h2>
+            <p> input function in python is used to take input and return it in string format and stores it in a string.</p><br>
+            <p>FOR EXAMPLE:<br>
+                If we want to take name as input from user then we can do it using input function<br>
+                name=input("enter your name:")  <br>      
+                <strong> # everything written inside double or single quotes is a string or simply u can say it is a message
+                shown to a user where input function is going  to take input as string and will assign that value to variable name.</strong>
+            </p>
+        </section>
+        <section class="note-section">
+            <h2>Flow of execution</h2>
+            <p>Execution in python begins with the very first line.We have three ways of execution of statements in python.</p>
+
+
+            <ul>
+                <li><strong>Sequetial statements</strong></li>
+                These are the statements which execute one after the other.
+                <p class="s1">
+                FOR EXAMPLE:<br>
+                n=int(input("enter number:"))<br>
+                square=n**2<br>
+                print(square)<br>
+                This is the example of sequential statements where execution starts from the first line that is from taking 
+                input which is stored in n. Then flow comes to the second line where we ge get square of number and it is stored
+                in square variable and then it is printed.<br>
+                </p>
+    
+            </ul>
+            <ul>
+                <li><strong>Conditional statements</strong></li>
+                These are the statements which execute when any Condition is true.
+                <p >
+                FOR EXAMPLE:
+                <pre class="s1">
+                n=int(input("enter number:"))
+                if(n%2==0):
+                    square=n**2
+                    print(square)
+                else:
+                    print(n*3)
+                </pre>
+                
+                This is the example of Conditional statements where execution starts from the first line that is from taking 
+                input which is stored in n.Then in the second line condition is checked if then n is even or odd, if n is even 
+                then it goes to third line where we get square of n and then it is printed but if condition is false that is it 
+                does not move to third line in that case it automatically goes to else part and prints the number n multiplied by 3.<br>
+            </p>
+    
+            </ul>
+            <ul>
+                <li><strong>iterative statements</strong></li>
+                These are the statements which executes repetetively thst is in loop.
+                FOR EXAMPLE:
+                <pre class="s1">
+                
+                n=int(input("enter number:"))
+                for i in range(2,21,2):
+                    print(i,end=" ")
+                </pre>
+                <p>
+                This is the example of iterative statements where execution starts from the first line that is from taking 
+                input which is stored in n. Then flow comes to the second line where we see <b>for</b> loop which has a range 
+                where range is  written as range(start,stop,step).In the above example i will start from 2 goes till 20 as last
+                number is always excluded in stop and then we have step of 2.<br>
+                OUTPUT:<br>
+                    2 4 6 8 10 12 14 16 18 20
+                </p>
+    
+            </ul>
+        </section>
+        <section class="note-section">
+            <h2>Strings</h2>
+            <p>String is collection of characters which are enclosed in single,double or triple quotes and it is immutable in nature.</p>
+    <strong>STRING OPERATIONS</strong>
+    <table>
+        <tr><th>Operations</th><th>Name</th><th>Description</th></tr>
+        <tr><td>+</td><td>Concatination</td><td>joins two strings</td></tr>
+        <tr><td>*</td><td>Repitition</td><td>replicates two strings</td></tr>
+        <tr><td>in/notin</td><td>Membership</td><td>returns true if character is present in given sring and returns false if it is not present.</td></tr>
+        <tr><td>[:]</td><td>Range(start,stop,step)</td><td>extract part of string from given range</td></tr>
+        <tr><td>[]</td><td>slice[n:m]</td><td>extract part of string from given index</td></tr>
+    </table><br>
+    <strong>BUILT-IN STRING METHODS:</strong>
+    <table>
+       <tr><td>str():</td> <td>Converts an object to a string</td></tr>
+       <tr><td>len():</td> <td>Returns the length of the string.</td></tr>
+       <tr><td> isalnum():</td><td>Checks if all characters in the string are alphanumeric.</td></tr>
+       <tr><td>isalpha(): </td><td>Checks if all characters are alphabetic.</td></tr>
+       <tr><td>isdigit(): </td><td>Checks if all characters are digits.</td></tr>
+       <tr><td>isupper(): </td><td>Checks if all characters are uppercase.</td></tr>
+       <tr><td>islower():</td> <td>Checks if all characters are lowercase.</td></tr>
+       <tr><td>isspace(): </td><td>Checks if all characters are whitespace.</td></tr>
+       <tr><td>lower():</td><td> Converts all characters to lowercase.</td></tr>
+       <tr><td>upper():</td> <td>Converts all characters to uppercase.</td></tr>
+       <tr><td>title():</td><td> Converts the first character of each word to uppercase.</td></tr>
+       <tr><td>capitalize(): </td><td>Converts the first character to uppercase and the rest to lowercase.</td></tr>
+       <tr><td> swapcase():</td> <td>Swaps the case of each character.</td></tr>
+       <tr><td> find():</td> <td>Returns the index of the first occurrence of a substring; returns -1 if not found.</td></tr>
+       <tr><td> index(): </td><td>Like find(), but raises an error if the substring is not found.</td></tr>
+       <tr><td> count():</td> <td>Counts occurrences of a substring.</td></tr>
+       <tr><td> startswith():</td> <td>Checks if a string starts with a specified prefix.</td></tr>
+       <tr><td> replace():</td> <td>Replaces occurrences of a substring with another substring.</td></tr>
+       <tr><td> endswith():</td> <td>Checks if a string ends with a specified suffix.</td></tr>
+       <tr><td>split():</td> <td>Splits the string into a list of substrings based on a delimiter.</td></tr>
+       <tr><td> splitlines():</td><td> Splits the string at line breaks.</td></tr>
+       <tr><td> join():</td> <td>Joins a list of strings into a single string, using a specified separator.</td></tr>
+       <tr><td> strip():</td> <td>Removes leading and trailing whitespace.</td></tr>
+       <tr><td> lstrip():</td><td> Removes leading whitespace.</td></tr>
+       <tr><td>rstrip():</td> <td>Removes trailing whitespace.</td></tr>
+       <tr><td>center():</td> <td>Centers the string in a field of a given width, padded by a specified character.</td></tr>
+    </table><br>
+        </section>
+        <section class="note-section">
+            <h2>Lists</h2>
+            <p>List is a collection of heterogeneous datatype which is mutable in nature and are enclosed in square braces.</p>
+            <strong>LIST OPERATIONS</strong>
+        <table>
+        <tr><th>Operations</th><th>Name</th><th>Description</th></tr>
+        <tr><td>+</td><td>Concatination</td><td>joins two lists</td></tr>
+        <tr><td>*</td><td>Repitition</td><td>replicates two lists</td></tr>
+        <tr><td>in/notin</td><td>Membership</td><td>returns true if value is present in given list and returns false if it is not present.</td></tr>
+        <tr><td>[:]</td><td>Range(start,stop,step)</td><td>extract part of list from given range</td></tr>
+        <tr><td>[]</td><td>slice[n:m]</td><td>extract part of list from given index</td></tr>
+    </table>
+    <br>
+    <strong>BUILT-IN LIST METHODS.</strong>
+    <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>len(list)</td><td>returns len of string</td></tr>
+        <tr><td>max(list)</td><td>returns the maximum value of the list.</td></tr>
+        <tr><td>min(list)</td><td>returns the minimum value of list.</td></tr>
+        <tr><td>list(seq)</td><td>convert sequence to list</td></tr>
+        <tr><td>sum(list)</td><td>returns the sum of list</td></tr>
+        <tr><td>all()</td> <td>Returns True if all elements in an iterable are True.</td></tr>
+        <tr><td>any()</td> <td>Returns True if any element in an iterable is True.</td></tr>
+        <tr><td>map()</td><td>Applies a function to all items in an iterable.</td></tr>
+        <tr><td>reverse()</td><td>Returns a reversed iterator.</td></tr>
+        <tr><td>sort()</td> <td>Returns a sorted list of items.</td></tr>
+        <tr><td>append</td><td>it add the element at the end of the list.</td></tr>
+        <tr><td>extend</td><td>id adds the one lit to the end of another list.</td></tr>
+    </table>
+        </section>
+        <section class="note-section">
+            <h2>Tuples</h2>
+            <p>Tuple is a collection of heterogeneous datatype which is immutable in nature and are enclosed in paranthesis.</p>
+            <strong>TUPLE OPERATIONS:</strong>
+           
+                <table>
+                    <tr><th>Operations</th><th>Name</th><th>Description</th></tr>
+                    <tr><td>+</td><td>Concatination</td><td>joins two tuples</td></tr>
+                    <tr><td>*</td><td>Repitition</td><td>replicates two tuples</td></tr>
+                    <tr><td>in/notin</td><td>Membership</td><td>returns true if value is present in given tuple and returns false if it is not present.</td></tr>
+                    <tr><td>[:]</td><td>Range(start,stop,step)</td><td>extract part of tuple from given range</td></tr>
+                    <tr><td>[]</td><td>slice[n:m]</td><td>extract part of tuple from given index</td></tr>
+                </table>
+                <br>
+            <strong>BUILT-IN TUPLE METHODS:</strong>
+            <table>
+            <tr><td>all()</td> <td>Returns True if all elements in an iterable are True.</td></tr>
+            <tr><td>any()</td> <td>Returns True if any element in an iterable is True.</td></tr>
+            <tr><td>len()</td><td>returns len of the tuple</td></tr>
+            <tr><td>tuple(seq)</td><td>converts sequence to tuple. </td></tr>
+            <tr><td>sorted()</td> <td>Returns a sorted list of tuple elements.</td></tr>
+            <tr><td>max</td><td>returns maximum value of the tuple</td></tr>
+            <tr><td>min</td><td>return minimum value of the tuptle.</td></tr>
+            </table>
+            <br>
+        </section>
+        <section class="note-section">
+            <h2>Dictionaries</h2>
+            <p>Dictionary is key:value pair enclosed in curly braces.</p>
+    
+    <strong>BUILT-IN DICTIONARY METHODS:</strong>
+    <table>
+    <tr><td>update()</td> <td>adds key:value pair at the end of the dictionary.</td></tr>
+    <tr><td>dictionaryname.keys()</td> <td>Returns list of keys</td></tr>
+    <tr><td>len()</td><td>returns len of the tuple</td></tr>
+    <tr><td>dictionaryname.value()</td><td>Returns list of values</td></tr>
+    <tr><td>sorted(dictionaryname)</td> <td>Returns a sorted dictionary according to keys.</td></tr>
+    <tr><td>dictionaryname.items()</td><td>returns list of dictionary's(key,value) tuple pairs.</td></tr>
+    <tr><td>dictionaryname.clear()</td><td>remves all elements from the dictionary.</td></tr>
+    </table>
+    </section>
+  
+
+    </main>
+    <footer>
+        <h1>About Me - Codenotes Hub</h1>
+        <div class="content">
+            <h2>Welcome to <span class="highlight">Codenotes Hub</span>!</h2>
+            <p>Hello! I'm passionate about coding, teaching, and helping others grow their technical skills. Codenotes Hub is a space where I share insights, tutorials, and resources that I’ve found helpful in my own coding journey.</p>
+            
+            <h2>My Mission</h2>
+            <p>At Codenotes Hub, my goal is to make coding accessible and enjoyable for everyone, from beginners to experienced developers. I believe that with the right resources and community support, anyone can become proficient in programming.</p>
+            
+            <h2>What You’ll Find Here</h2>
+            <p>Whether you’re looking for coding tips, deep-dives into programming concepts, or solutions to common development challenges, Codenotes Hub aims to be your go-to resource.</p>
+            
+            <h2>Join the Community</h2>
+            <p>If you’re as passionate about coding as I am, feel free to explore, learn, and contribute. Let’s build and grow together!</p>
+        </div>
+    </footer>
+</body>
+</html>

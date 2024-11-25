@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL Notes - Codenotes Hub</title>
+    <link rel="stylesheet" href="mysql.css">
+</head>
+<body>
+    <nav><a href="/index.html" ><button>HOME</button></a>
+        <a href="https://onecompiler.com/html"><button>HTML</button></a>
+        <a href="https://www.programiz.com/python-programming/online-compiler/"><button>PYTHON</button></a>
+        <a href="https://onecompiler.com/html/3wx7252uq"><button>CSS</button></a>
+        <a href="last.html"><button>Help Desk</button></a>
+    
+    </nav>
+    <header>
+        <h1>MySQL Notes</h1>
+        <p>Manage and query your data effectively using MySQL.</p>
+    </header>
+
+    <main>
+        <section class="note-section">
+            <h2>Introduction to DBMS</h2>
+            <p>A Database Management System (DBMS) is software that allows users to define, create, manage, and control access to databases. It serves as an interface between the end-users and the database, enabling efficient data handling, storage, retrieval, and management. DBMSs are crucial in applications that require structured data storage, organization, and secure access.</p>
+        </section>
+        <section class="note-section">
+            <h2>Functions of DBMS</h2>
+        <ul>
+        <li><strong>Data Definition</strong>: Creating and modifying the structure of the database using Data Definition Language (DDL).</li>
+        <li><strong>Data Manipulation</strong>: Querying and updating data using Data Manipulation Language (DML).</li>
+        <li><strong>Data Security</strong>: Ensuring data protection through user access controls and permissions.</li>
+        <li><strong>Data Integrity</strong>: Enforcing rules to ensure data accuracy and consistency.</li>
+        <li><strong>Concurrency Control</strong>: Managing simultaneous access by multiple users to prevent conflicts.</li>
+        <li><strong>Backups and Recovery</strong>: Protecting data against loss by creating backups and restoring data in case of failures.</li>
+        </ul>
+        </section>
+        <section class="note-section">
+            <h2>Advantages of DBMS</h2>
+        <ul>
+            <li>Improved data sharing and data security</li>
+            <li>Centralized data management</li>
+            <li>Reduced data redundancy and inconsistency</li>
+            <li>Improved data integrity</li>
+            <li>Efficient data backup and recovery</li>
+        </ul>
+            <h2>Disadvatages of DBMS</h2>
+            <ul>
+                <li>Complexity and size of the software</li>
+                <li>Higher cost (for some systems)</li>
+                <li>Potential for increased vulnerability if not managed securely</li>
+            </ul>
+        </section>
+
+        <section class="note-section">
+            <h2>DDL Commands</h2>
+            <ul>
+                <li>Creating databases</li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    create database School;<br>
+                    #this will create a database with name School
+                </p>
+                <li>Opening databases</li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    use School;<br>
+                    #this will open a database with name school
+                </p>
+                <li>Removing databases</li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    drop database School;<br>
+                    #this will delete a database with name school
+                </p>
+                <li>Creating table</li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    create table student(rollno integer primary key,name char(30),marks integer not null,gender char(1),dateofbirth date);<br>
+                    #this will create a table with name student which has rollno which is primary key that means
+                     its values can not be repeated in any other row and it should not be null.It also contains name 
+                     of student which is in character datatype and has size of 30 bits.It contains marks of the student which is in integer data type.it has gender with character datatype and dateofbirth with date datatype.
+                </p>
+                <li>Viewing table structure</li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    describe School;<br>
+                    #this will show u the structure of te table
+                </p>
+                <li>Alter table</li>
+                <p class="syntax">
+                    <ol type="a">
+                        <li>
+                            adding a column to table
+                        </li>
+                        <p class="syntax">SYNTAX:<br>
+                        alter table School add(city char(30));<br>
+                        #this will add add column to the table</p>
+                        <li>
+                            adding a column to table with default value
+                        </li>
+                        <p class="syntax">SYNTAX:<br>
+                        alter table School add(city char(30) default "Jalandhar");<br>
+                        #this will create  column with defaut value as Jalandhar</p>
+                        <li>
+                            modifying existing column definition
+                        </li>
+                        <p class="syntax">SYNTAX:<br>
+                        alter table School modify(name char(50));<br>
+                        #this will change size of character datatype of name in a table</p>
+                        <li>
+                            rename a column 
+                        </li>
+                        <p class="syntax">SYNTAX:<br>
+                        alter table School change(city state char(30));<br>
+                        #this will change name of column from city to state</p>
+                        <li>
+                            removing a column from table
+                        </li>
+                        <p class="syntax">SYNTAX:<br>
+                        alter table School drop(state);<br>
+                        #this will remove state column from the table</p>
+                    </ol>
+                    <li>drop table command</li>
+                    <p class="syntax">SYNTAX:<br>
+                    drop table student;<br>
+                    #this will delete the table student</p>
+                    
+                    
+                    </p>
+                
+            </ul>
+        </section>
+        <section class="note-section">
+            <h2>DML commands</h2>
+            <ol>
+                <li>
+                    inserting data into table
+                </li>
+                <p>
+                    SYNTAX:<br>
+                    insert into student values(1,"Rahul","M","88","2002-11-12");
+                    insert into student values(2,"Vedika","F","89","2003-08-10");
+                    insert into student values(3,"Yashika","F","88","2002-05-26");
+                    insert into student values(4,"Ankit","M","82","2002-12-19");
+                </p>
+                <li>
+                    modifying data in a table
+                </li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    update student set marks=90 where name="Rahul";<br>
+                    #This will update the marks of student where name is rahul
+                </p>
+                <li>
+                    updating multiple columns
+                </li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    update student set marks=90 and rollno=2 where name="Rahul";<br>
+                    #This will change the marks and rollno of student where name is rahul
+                </p>
+                <li>
+                    Updting to null value
+                </li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    update student set marks=NULL where name="Rahul";<br>
+                    #This will set marks of student as null where name is rahul
+                </p>
+                <li>
+                    removing data in a table
+                </li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    delete from student where name=rahul;<br>
+                    #This will delete row from table
+                </p>
+            </ol>
+        </section>
+        <section class="note-section">
+            <h2>DQL(Data Query Language) COMMANDS</h2>
+            <ol>
+                <li><strong>select command</strong></li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    select name,gender from student;<br>
+                    #this will show you a table containing name and gender of students
+                </p>
+                <li><strong>selecting complete table</strong></li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    select * from student;<br>
+                    #This will show you complete table
+                </p>
+                <li><strong>Eliminating redundant values</strong></li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    select distinct marks from student;<br>
+                    #this will show u a table containing distinct marks only that is it will not show you marks 88 two times.
+                </p>
+            </ol>
+        </section>
+        <section class="note-section">
+            <h2>SQL Operators</h2>
+            <ol>
+                <li><strong>Arithmetic Operators</strong></li>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    select rollno,marks+10 from student;<br>
+                    #This will show you table containing roll and marks+10(Remember that it will not bring change in original table)
+                </p>
+                <li><strong>Comparison Operators</strong></li>
+                <table>
+                    <tr><th>Comparison Operator</th><th>symbol</th></tr>
+                    <tr><td>Equals to</td><td>=</td></tr>
+                    <tr><td>less than</td><td>&lt;</td></tr>
+                    <tr><td>less than equalto</td><td>&lt;=</td></tr>
+                    <tr><td>greater than</td><td>&gt;</td></tr>
+                    <tr><td>grater than equalto</td><td>&gt;=</td></tr>
+    
+                </table>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    select rollno,marks from student where marks>90;<br>
+                    #This will show you table containing roll and marks where marks are greater than 90(Remember that it will not bring change in original table.)
+                </p>
+                <br>
+                <li><strong>Logical Operators</strong></li>
+                <table>
+                    <tr><th><strong>logical Operator</strong></th></tr>
+                    <tr><td>AND</td></tr>
+                    <tr><td>OR</td></tr>
+                    <tr><td>NOT</td></tr>
+    
+                </table>
+                <br>
+                <p class="syntax">
+                    SYNTAX:<br>
+                    select rollno,marks from student where rollno>2 and marks>88;<br>
+                    #This will show you table containing roll and marks where rollno are greater than 2 and marks are greater than 88(Remember that it will not bring change in original table.)
+                </p>
+                <br>
+                <li><strong>special Operators</strong></li>
+                <table>
+                    <tr><th>special Operator</th><th>description</th></tr>
+                    <tr><td>Between/Not Between</td><td>check whether an attribute value is within range or not</td></tr>
+                    <tr><td>Is Null/Is Not Null</td><td>check whether an attribute value is Null or not</td></tr>
+                    <tr><td>like/not like</td><td>check whether an attribute value matches any value with given list or not</td></tr>
+                    <tr><td>Distinct</td><td>Permits only unique values</td></tr>
+                </table>
+                <br>
+                <li><strong>Aggregate functions</strong></li>
+                <table>
+                    <tr><th>aggregate function</th><th>description</th><th>Syntax</th></tr>
+                    <tr><td>COUNT()</td><td>Returns total number of records with non null value</td><td>select count(*) from student</td></tr>
+                    <tr><td>MIN()</td><td>return minimum value found in column</td><td>select min(marks)from student</td></tr>
+                    <tr><td>MAX()</td><td>return maximum value found in column</td><td>select max(marks) from student</td></tr>
+                    <tr><td>SUM()</td><td>return sum of all values in given column</td><td>select count(marks)from student</td></tr>
+                    <tr><td>AVG()</td><td>return average of all values in given column</td><td>select avg(marks) from student</td></tr>
+                </table>
+                </ol>
+        </section>
+        <section class="note-section">
+            <h2>Sorting in python</h2>
+            <p class="syntax">
+                SYNTAX:<br>
+                SELECT * FROM STUDENT ORDER BY NAME;<br>
+                # this will print complete table which is order by name i.e in alphabetical order
+            </p>
+            <p class="syntax">
+                SELECT NAME, MARKS FROM STUDENT ORDER BY MARKS DESC;<br>
+                #This will print name and marks where marks are in descending order.
+            </p>
+        </section>
+        <section class="note-section">
+            <h2>Conclusion</h2>
+            <p>In essence, a DBMS simplifies the process of managing large amounts of data while ensuring security, consistency, and ease of access, making it fundamental for business applications, websites, data analysis, and more.</p>
+        </section>
+
+        <!-- Add more sections as needed -->
+    </main>
+    <footer>
+        <h1>About Me - Codenotes Hub</h1>
+        <div class="content">
+            <h2>Welcome to <span class="highlight">Codenotes Hub</span>!</h2>
+            <p>Hello! I'm passionate about coding, teaching, and helping others grow their technical skills. Codenotes Hub is a space where I share insights, tutorials, and resources that I’ve found helpful in my own coding journey.</p>
+            
+            <h2>My Mission</h2>
+            <p>At Codenotes Hub, my goal is to make coding accessible and enjoyable for everyone, from beginners to experienced developers. I believe that with the right resources and community support, anyone can become proficient in programming.</p>
+            
+            <h2>What You’ll Find Here</h2>
+            <p>Whether you’re looking for coding tips, deep-dives into programming concepts, or solutions to common development challenges, Codenotes Hub aims to be your go-to resource.</p>
+            
+            <h2>Join the Community</h2>
+            <p>If you’re as passionate about coding as I am, feel free to explore, learn, and contribute. Let’s build and grow together!</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Notes - Codenotes Hub</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <nav><a href="/index.html" ><button>HOME</button></a>
+        <a href="https://onecompiler.com/html"><button>HTML</button></a>
+        <a href="https://www.programiz.com/python-programming/online-compiler/"><button>PYTHON</button></a>
+        <a href="https://onecompiler.com/html/3wx7252uq"><button>CSS</button></a>
+        <a href="last.html"><button>Help Desk</button></a>
+    
+    </nav>
+    <header>
+        <h1>CSS Notes</h1>
+        <p>Style your web pages beautifully using CSS.</p>
+    </header>
+
+    <main>
+        <section class="note-section">
+            <h2>Introduction to CSS</h2><br>
+            <p>Cascading Style Sheets, is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications. It is a language designed to simplify the process of making web pages presentable by handling the look and feel of the web content. CSS allows you to control the layout of multiple web pages all at once.</p><br>
+        </section>
+
+        <section class="note-section">
+            <h2>Ways Of Writing CSS in HTML</h2><br>
+            <p>CSS can be added to HTML documents in 3 ways:</p>
+            <ul>
+                <li>Inline - by using the style attribute inside HTML elements</li>
+                <li>Internal - by using a &lt;style&gt; element in the &lt;head&gt; section</li>
+                <li>External - by using a &lt;link&gt; element to link to an external CSS file</li>
+            </ul> 
+            <br>
+            <h2>INLINE CSS</h2><br>
+            <p>An inline CSS is used to apply a unique style to a single HTML element.<br><br>An inline CSS uses the style attribute of an HTML element.<br>The following example sets the text color of the &lt;h1&gt; element to blue, and the text color of the &lt;p&gt; element to red:<br><br><p id="example">Example:<br>&lt;h1 style="color:blue;"&gt;A Blue Heading&lt;/h1&gt;<br>&lt;p style="color:red;"&gt;A red paragraph.&lt;/p&gt;</p><br>
+
+            <h2>Internal CSS</h2><br>
+            <p>An internal CSS is used to define a style for a single HTML page.<br><br> An internal CSS is defined in the &lt;head&gt; section of an HTML page, within a &lt;style&gt; element.<br><br>The following example sets the text color of ALL the &lt;h1&gt; elements (on that page) to blue, and the text color of ALL the &lt;p&gt; elements to red. In addition, the page will be displayed with a "powderblue" background color: <br></p>
+            <pre class="example">&lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;style&gt;
+                body {background-color: powderblue;}
+                h1   {color: blue;}
+                p    {color: red;}
+                &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                
+                &lt;h1&gt;This is a heading&lt;/h1&gt;
+                &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                
+                &lt;/body&gt;
+                &lt;/html&gt;</pre>
+            <br> 
+            <h2>EXTERNAL CSS</h2><br>
+            <p>An external style sheet is used to define the style for many HTML pages.<br>
+                To use an external style sheet, add a link to it in the &lt;head&gt; section of each HTML page:<br>
+                </p>
+                <pre class="example">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;head&gt;
+                    &lt;link rel="stylesheet" href="styles.css"&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                
+                    &lt;h1&gt;This is a heading&lt;/h1&gt;
+                    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+        </section>
+        <section class="note-section">
+            <h2>CSS FONTS,COLORS AND SIZES</h2>
+    <p>CSS font-family property is used set different fonts to text</p>
+    <p>CSS color property is used to set color to text</p>
+    <p>CSS font-size property is used to set size of text</p>
+    <pre class="example">
+        &lt;!DOCTPE html&gt;
+        &lt;html&gt;        
+        &lt;head&gt; 
+        &lt;style&gt;
+        h1 {
+          color: blue;
+          font-family: verdana;
+          font-size: 300%;
+        }
+        p {
+          color: red;
+          font-family: courier;
+          font-size: 160%;
+        }
+        &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body>&gt;        
+        &lt;h1&gt;This is a heading&lt;/h1&gt;       
+        &lt;p&gt;This is a paragraph.&lt;/p&gt;      
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+    <h2>CSS BACKGROUND-COLOR</h2>
+    <p>CSS background-color property is used to set color in background</p>
+    <pre class="example">
+        p{
+            background-color:"red";
+        }
+    </pre>
+    <h2>CSS PADDING</h2>
+    <p>CSS padding property is used to give space between text and border</p>
+    <pre class="example">
+            p{
+                Padding:10px;
+            }
+    </pre>
+    <h2>CSS MARGIN</h2>
+    <p>CSS margin property is used to give space between borders</p>
+    <pre class="example">
+        p{
+            margin:10px;
+        }
+    </pre>
+        </section>
+    </main>
+    <footer>
+        <h1>About Me - Codenotes Hub</h1>
+        <div class="content">
+            <h2>Welcome to <span class="highlight">Codenotes Hub</span>!</h2>
+            <p>Hello! I'm passionate about coding, teaching, and helping others grow their technical skills. Codenotes Hub is a space where I share insights, tutorials, and resources that I’ve found helpful in my own coding journey.</p>
+            
+            <h2>My Mission</h2>
+            <p>At Codenotes Hub, my goal is to make coding accessible and enjoyable for everyone, from beginners to experienced developers. I believe that with the right resources and community support, anyone can become proficient in programming.</p>
+            
+            <h2>What You’ll Find Here</h2>
+            <p>Whether you’re looking for coding tips, deep-dives into programming concepts, or solutions to common development challenges, Codenotes Hub aims to be your go-to resource.</p>
+            
+            <h2>Join the Community</h2>
+            <p>If you’re as passionate about coding as I am, feel free to explore, learn, and contribute. Let’s build and grow together!</p>
+        </div>
+    </footer>
+</body>
+</html>
+
